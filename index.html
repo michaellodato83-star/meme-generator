@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meme Generator</h1>
+            <p>Upload an image, add text, and create your meme!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="control-group">
+                    <label class="section-label">Choose Template or Upload</label>
+                    <div class="template-gallery" id="templateGallery">
+                        <!-- Templates will be loaded here -->
+                    </div>
+                    <label for="imageInput" class="file-label">
+                        <span>📷 Upload Your Own Image</span>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                    </label>
+                </div>
+
+                <div class="control-group">
+                    <label for="textInput">Text:</label>
+                    <textarea id="textInput" placeholder="Enter your meme text...&#10;Press Enter for new lines" rows="3"></textarea>
+                </div>
+
+                <div class="control-group">
+                    <label for="textSize">Text Size: <span id="sizeValue">40</span>px</label>
+                    <input type="range" id="textSize" min="20" max="100" value="40">
+                </div>
+
+                <div class="control-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" value="#ffffff">
+                </div>
+
+                <div class="control-group">
+                    <button id="downloadBtn" class="download-btn" disabled>Download Meme</button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="memeCanvas"></canvas>
+                <div id="placeholder" class="placeholder">
+                    <p>Upload an image to get started</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
