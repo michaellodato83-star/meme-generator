@@ -7,6 +7,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useDB } from '@/components/InstantDBProvider';
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
   const db = useDB();
   const [activeTab, setActiveTab] = useState<'create' | 'feed'>('feed');
