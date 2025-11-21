@@ -97,3 +97,5 @@ vercel
 
 Make sure to set the `NEXT_PUBLIC_INSTANT_APP_ID` environment variable in your deployment platform.
 
+**Note:** The app is deployed and automatically redeploys on every git push to the main branch.
+
