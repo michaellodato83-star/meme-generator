@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['instantdb.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.instantdb.com',
+      },
+    ],
   },
 }
 
